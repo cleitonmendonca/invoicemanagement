@@ -1,3 +1,3 @@
 # InvoiceManagement
 
-Clean Architecture project exemple
+Clean Architecture project example
