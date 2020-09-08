@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "h6vE79KMbmf1Mkc+y5e15l9iGvApqESYw4RJFwUmsKDbRGAmoVMKpHdwaUOsCO330aY1HT9JBevsUhfUP1Zplw==",
+  "dgSpecHash": "IZIJ4aGIw3FWLbplJBKGtTvFb9vvf5LrUa4LfX7Cp07RNI/z8mv0GRoR0tCg6tyUw9NZpuLWdRglpoSRidXA0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\catia\\source\\repos\\InvoiceManagement\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\catia\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
+    "C:\\Users\\catia\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.2.0\\fluentvalidation.dependencyinjectionextensions.9.2.0.nupkg.sha512",
+    "C:\\Users\\catia\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\catia\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\catia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\catia\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\catia\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.7\\microsoft.entityframeworkcore.3.1.7.nupkg.sha512",
