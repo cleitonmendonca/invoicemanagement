@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using InvoiceManagementApp.Api;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceManagementApp.Api.Controllers
+namespace Api.Controllers
 {
     [Authorize]
     [ApiController]

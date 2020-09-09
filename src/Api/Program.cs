@@ -1,13 +1,14 @@
-using InvoiceManagementApp.Infrastructure.Data;
+using System;
+using Infrastructure.Data;
+
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
 
-namespace InvoiceManagementApp.Api
+namespace Api
 {
     public class Program
     {
@@ -31,7 +32,7 @@ namespace InvoiceManagementApp.Api
             host.Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>();
     }

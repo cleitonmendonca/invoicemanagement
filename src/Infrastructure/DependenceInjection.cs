@@ -1,12 +1,13 @@
 ﻿using Application.Common.Interfaces;
-using InvoiceManagementApp.Infrastructure.Data;
-using InvoiceManagementApp.Infrastructure.Models;
+using Infrastructure.Data;
+using Infrastructure.Models;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceManagementApp.Infrastructure
+namespace Infrastructure
 {
     public static class DependencyInjection
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceManagementApp.Api.Controllers
+namespace Api.Controllers
 {
     public class OidcConfigurationController : Controller
     {

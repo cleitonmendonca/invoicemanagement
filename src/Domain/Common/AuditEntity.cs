@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Domain.Commom
+namespace Domain.Common
 {
     public class AuditEntity
     {

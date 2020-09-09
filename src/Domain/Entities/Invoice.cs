@@ -1,8 +1,9 @@
-﻿using Domain.Commom;
-using Domain.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+
+using Domain.Enums;
+using Domain.Common;
 
 namespace Domain.Entities
 {

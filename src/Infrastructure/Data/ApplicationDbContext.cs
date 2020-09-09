@@ -1,16 +1,19 @@
-﻿using InvoiceManagementApp.Infrastructure.Models;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+using Application.Common.Interfaces;
+using Domain.Common;
+using Domain.Entities;
+using Infrastructure.Models;
+
 using IdentityServer4.EntityFramework.Options;
+
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Application.Common.Interfaces;
-using Domain.Entities;
-using System.Threading.Tasks;
-using System.Threading;
-using Domain.Commom;
-using System;
 
-namespace InvoiceManagementApp.Infrastructure.Data
+namespace Infrastructure.Data
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
     {
