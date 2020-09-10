@@ -1,18 +1,33 @@
-﻿namespace Application.Invoices.ViewModels
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Domain.Entities;
+using Domain.Enums;
+using FluentValidation;
+
+namespace Application.Invoices.ViewModels
 {
-    public class InvoiceItemViewModel
+    public class InvoiceViewModel
     {
-        public long Id { get; set; }
-        public string Item { get; set; }
-        public double Quantity { get; set; }
-        public double Rate { get; set; }
-        public double Amount 
+        public InvoiceViewModel()
         {
-            get
-            {
-                return Quantity * Rate;
-            }
+            this.InvoiceItems = new Collection<InvoiceItemViewModel>();
         }
 
+        public int Id { get; set; }
+        public string InvoiceNumber { get; set; }
+        public string Logo { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
+        public DateTime Date { get; set; }
+        public string PaymentTerms { get; set; }
+        public DateTime? DueDate { get; set; }
+        public DiscountType DiscountType { get; set; }
+        public double Discount { get; set; }
+        public TaxType TaxType { get; set; }
+        public double Tax { get; set; }
+        public double AmountPaid { get; set; }
+        public ICollection<InvoiceItemViewModel> InvoiceItems { get; set; }
+        public DateTime Created { get; set; }
     }
 }
