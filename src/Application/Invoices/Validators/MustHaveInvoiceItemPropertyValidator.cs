@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Application.Invoices.ViewModels;
+﻿using System.Linq;
+using System.Collections.Generic;
 using FluentValidation.Validators;
+using Application.Invoices.ViewModels;
 
 namespace Application.Invoices.Validators
 {

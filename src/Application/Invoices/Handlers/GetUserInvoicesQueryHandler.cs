@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using MediatR;
+using AutoMapper;
+
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+
 using Application.Common.Interfaces;
 using Application.Invoices.Queries;
 using Application.Invoices.ViewModels;
-using AutoMapper;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace Application.Invoices.Handlers
 {

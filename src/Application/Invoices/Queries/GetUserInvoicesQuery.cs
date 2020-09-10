@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using MediatR;
+using System.Collections.Generic;
 using Application.Invoices.ViewModels;
-using MediatR;
 
 namespace Application.Invoices.Queries
 {

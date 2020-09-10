@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Domain.Entities;
+
 using Domain.Enums;
-using FluentValidation;
 
 namespace Application.Invoices.ViewModels
 {

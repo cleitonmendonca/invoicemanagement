@@ -1,14 +1,12 @@
-﻿using Application.Common.Interfaces;
-using Application.Invoices.Commands;
-
-using MediatR;
-
-using System;
-using System.Linq;
+﻿using MediatR;
+using AutoMapper;
 using System.Threading;
 using System.Threading.Tasks;
-using AutoMapper;
+
 using Domain.Entities;
+using Application.Common.Interfaces;
+using Application.Invoices.Commands;
+
 
 namespace Application.Invoices.Handlers
 {

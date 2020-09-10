@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using System.Collections.Generic;
+
 using Application.Common.Interfaces;
-using Application.Invoices.Commands;
 using Application.Invoices.Queries;
+using Application.Invoices.Commands;
 using Application.Invoices.ViewModels;
-using Microsoft.AspNetCore.Authorization;
+
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers
 {

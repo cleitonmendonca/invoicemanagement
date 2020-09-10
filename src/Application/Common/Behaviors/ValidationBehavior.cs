@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MediatR;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using FluentValidation;
-using MediatR;
 
 namespace Application.Common.Behaviors
 {

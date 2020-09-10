@@ -1,5 +1,5 @@
-﻿using Application.Invoices.Commands;
-using FluentValidation;
+﻿using FluentValidation;
+using Application.Invoices.Commands;
 
 namespace Application.Invoices.Validators
 {

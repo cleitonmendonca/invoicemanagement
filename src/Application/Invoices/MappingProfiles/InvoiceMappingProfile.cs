@@ -1,7 +1,7 @@
-﻿using Application.Invoices.Commands;
-using Application.Invoices.ViewModels;
-using AutoMapper;
+﻿using AutoMapper;
 using Domain.Entities;
+using Application.Invoices.Commands;
+using Application.Invoices.ViewModels;
 
 namespace Application.Invoices.MappingProfiles
 {
