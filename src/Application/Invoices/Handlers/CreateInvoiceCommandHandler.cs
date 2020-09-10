@@ -7,7 +7,6 @@ using Domain.Entities;
 using Application.Common.Interfaces;
 using Application.Invoices.Commands;
 
-
 namespace Application.Invoices.Handlers
 {
     public class CreateInvoiceCommandHandler : IRequestHandler<CreateInvoiceCommand, int>
