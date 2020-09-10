@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 
-namespace InvoiceManagementApp.Api.Controllers
+namespace Api.Controllers
 {
     public class OidcConfigurationController : Controller
     {

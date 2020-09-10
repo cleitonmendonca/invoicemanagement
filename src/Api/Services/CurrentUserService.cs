@@ -1,7 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
-using System.Threading;
 
 namespace Api.Services
 {

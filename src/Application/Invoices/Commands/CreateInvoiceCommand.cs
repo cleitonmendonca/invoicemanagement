@@ -1,10 +1,11 @@
-﻿using Application.Invoices.ViewModels;
-using Domain.Enums;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
+
+using MediatR;
+
+using Domain.Enums;
+using Application.Invoices.ViewModels;
 
 namespace Application.Invoices.Commands
 {

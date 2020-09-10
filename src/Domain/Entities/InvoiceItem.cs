@@ -1,5 +1,4 @@
-﻿using Domain.Commom;
-using System.Net.Security;
+﻿using Domain.Common;
 
 namespace Domain.Entities
 {
