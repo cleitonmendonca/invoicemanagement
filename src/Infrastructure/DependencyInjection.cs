@@ -1,10 +1,10 @@
-﻿using Application.Common.Interfaces;
-using Infrastructure.Data;
+﻿using Infrastructure.Data;
 using Infrastructure.Models;
+using Application.Common.Interfaces;
 
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure

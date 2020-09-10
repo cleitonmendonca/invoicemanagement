@@ -2,16 +2,16 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-using Application.Common.Interfaces;
 using Domain.Common;
 using Domain.Entities;
 using Infrastructure.Models;
+using Application.Common.Interfaces;
 
 using IdentityServer4.EntityFramework.Options;
 
-using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 
 namespace Infrastructure.Data
 {
@@ -27,7 +27,7 @@ namespace Infrastructure.Data
 
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set ; }
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditEntity>())
             {
