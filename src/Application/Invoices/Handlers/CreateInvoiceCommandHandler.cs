@@ -24,7 +24,7 @@ namespace Application.Invoices.Handlers
         {
             var entity = _mapper.Map<Invoice>(request);
 
-            _context.Invoices.Add(entity);
+            await _context.Invoices.AddAsync(entity, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
             return entity.Id;
         }
