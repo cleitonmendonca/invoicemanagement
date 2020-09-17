@@ -1,3 +1,4 @@
+using System.Linq;
 using Application;
 using Api.Services;
 using Infrastructure;
@@ -10,6 +11,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NSwag;
+using NSwag.Generation.Processors.Security;
 
 namespace Api
 {
@@ -50,6 +53,18 @@ namespace Api
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddOpenApiDocument(configure =>
+            {
+                configure.Title = "InvoiceManagement API";
+                configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
+                {
+                    Type = OpenApiSecuritySchemeType.ApiKey,
+                    Name = "Authorization",
+                    In = OpenApiSecurityApiKeyLocation.Header,
+                    Description = "Type into the textBox: Bearer {your JWT token}."
+                });
+                configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +74,8 @@ namespace Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
+                app.UseOpenApi();
+                app.UseSwaggerUi3();
             }
             else
             {

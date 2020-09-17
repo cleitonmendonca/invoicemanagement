@@ -3,11 +3,14 @@ import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLi
 import { Link } from 'react-router-dom';
 import { LoginMenu } from './api-authorization/LoginMenu';
 import './NavMenu.css';
-
-export class NavMenu extends Component {
+interface IProps{}
+interface IState{
+  collapsed: boolean
+}
+export class NavMenu extends Component<IProps, IState> {
   static displayName = NavMenu.name;
 
-  constructor (props) {
+  constructor (props: IProps) {
     super(props);
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -33,12 +36,18 @@ export class NavMenu extends Component {
               <ul className="navbar-nav flex-grow">
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                </NavItem>
+                </NavItem>                
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/invoices">Invoices</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/create">Create Invoice</NavLink>
                 </NavItem>
                 <LoginMenu>
                 </LoginMenu>

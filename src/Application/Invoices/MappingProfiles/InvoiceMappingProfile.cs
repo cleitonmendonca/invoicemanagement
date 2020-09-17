@@ -10,12 +10,7 @@ namespace Application.Invoices.MappingProfiles
         public InvoiceMappingProfile()
         {
             CreateMap<Invoice, InvoiceViewModel>();
-            CreateMap<InvoiceItem, InvoiceItemViewModel>().ConstructUsing(item => new InvoiceItemViewModel
-            {
-                Item = item.Item,
-                Quantity = item.Quantity,
-                Rate = item.Rate
-            });
+            CreateMap<InvoiceItem, InvoiceItemViewModel>();
 
             CreateMap<InvoiceViewModel, Invoice>();
             CreateMap<InvoiceItemViewModel, InvoiceItem>();

@@ -2,7 +2,7 @@
 {
     public enum TaxType
     {
-        Flat,
-        Percentage
+        Flat = 0,
+        Percentage = 1
     }
 }
