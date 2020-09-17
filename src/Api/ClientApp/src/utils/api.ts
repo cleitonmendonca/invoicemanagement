@@ -9,7 +9,7 @@
 
 import authService from "../components/api-authorization/AuthorizeService";
 export class ApiClientBase{
-    baseApiUrl: string = "https://localhost:44385/";
+    baseApiUrl: string = "https://localhost:44385";
 
     protected async transformOptions(options: RequestInit): Promise<RequestInit>{
         const token = await authService.getAccessToken();
