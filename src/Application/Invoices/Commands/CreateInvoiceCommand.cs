@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Application.Invoices.ViewModels;
+using Domain.Enums;
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
-using MediatR;
-
-using Domain.Enums;
-using Application.Invoices.ViewModels;
+using Application.Common.Behaviors;
 
 namespace Application.Invoices.Commands
 {
-    public class CreateInvoiceCommand : IRequest<int>
+    public class CreateInvoiceCommand : IRequest<Response>
     {
         public CreateInvoiceCommand()
         {

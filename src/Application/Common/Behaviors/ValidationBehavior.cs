@@ -1,13 +1,14 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using FluentValidation;
+using FluentValidation.Results;
 
 namespace Application.Common.Behaviors
 {
-    public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse> where TResponse : Response
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -25,12 +26,20 @@ namespace Application.Common.Behaviors
                 .Where(f => f != null)
                 .ToList();
 
-            if (failures.Count() != 0)
+            return failures.Any()
+                ? Errors(failures)
+                : next();
+        }
+
+        private static Task<TResponse> Errors(IEnumerable<ValidationFailure> failures)
+        {
+            var response = new Response();
+            foreach (var failure in failures)
             {
-                throw new ValidationException(failures);
+                response.AddError(failure.ErrorMessage);
             }
 
-            return next();
+            return Task.FromResult(response as TResponse);
         }
     }
 }
