@@ -2,18 +2,26 @@
 
 namespace Specification.Exceptions
 {
-    public class DuplicateOrderChainException : Exception
+    public class DuplicateOrderChainException : BaseSpecificationException
     {
-        private new const string Message = "The specification contains more than one Order chain!";
+        private const string DuplicateOrderMessage = "The specification contains more than one Order chain!";
 
-        public DuplicateOrderChainException() : base(Message)
+        public DuplicateOrderChainException() : base(DuplicateOrderMessage)
         {
 
         }
 
-        public DuplicateOrderChainException(Exception innerException) : base(Message, innerException)
+        public DuplicateOrderChainException(Exception innerException) : base(DuplicateOrderMessage, innerException)
         {
 
+        }
+
+        public DuplicateOrderChainException(string specificationName) : base(FormatMessage(DuplicateOrderMessage, specificationName))
+        {
+        }
+
+        public DuplicateOrderChainException(string specificationName, Exception innerException) : base(FormatMessage(DuplicateOrderMessage, specificationName), innerException)
+        {
         }
     }
 }
